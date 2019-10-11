@@ -48,6 +48,9 @@ After 3 such timeouts, the player will be removed from the table.
 
 ### Stretch Goals
 
+**Increase interactivity:** Increase the interaction between users apart from chats. Maybe
+ the ability to gift *items* to other users on the table?
+
 **Incorporate security tests:** Have Static Application Security Testing (SAST) and
 Dynamic Application Security Testing (DAST).
 
@@ -58,6 +61,14 @@ Patti, namely, *Best-of-four* and *Community*.
 
 ### Challenges for the game:
 
-1. Developing a structure for storing information about players and game on the server is challenging as there is no database to keep track of it.
+1. Developing a *structure* for storing information about players and game on the server
+is challenging as there is no database to keep track of it. Maintaining the game state for
+ each table, with their chat history could require some smart designing on the Elixir side
+ of things. Interestingly, we have to develop the ability to *side-show* - a private show
+ of cards between two users.
 
-2. We will have to figure which is more interesting: Antes or Blinds.
+2. Figure which is more interesting - Antes or Blinds: We want to keep the game
+interesting and at the same time have a good amount of interactivity from the users. We
+intend to take a call between having *forced-blinds* after the Antes for entry, or simply
+allowing users to continue play after the Antes. In our experience, *side-show* and blinds
+are the elements that keep the game lively, even without the *forced-blinds* round.

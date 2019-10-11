@@ -1,14 +1,27 @@
 # Teen Patti
 
 *Teen Patti* (Hindi for Three Card Poker) is a well game known and played in the Indian
-sub-continent region. Essentially, every player is given a hand of 3 cards
-We plan to build an web version of the game that's compatible with mobile devices as well.
+sub-continent region. Essentially, every player is given a hand of 3 cards, and they bet
+whether they have the strongest hand. Strong hands are determined, based on the ranking of
+ hands:
 
-The rules of Teen Patti usually vary and are agreed upon before the match. Ranking of
-cards are pretty well established and common. Below are definitions for some of the
-varying rules for our implementation:
+ - **Three of kind (trio):** Three same cards, with three Aces being the highest and three
+  2s being the lowest.
+ - **Straight flush:** Three consecutive cards of the same suit.
+ - **Straight sequence:** Three consecutive cards, not from the same sequence.
+ - **Color flush:** Three cards from the same suit. Ties are resolved by the first high
+ card. If all card values are same, then suits are ranked from Spades > Diamond > Heart >
+ Clubs.
+ - **Pair:** Two cards of the same value. Pair with higher rank dominates. If a tie still
+ exists, then the value of third card decides decides the winner. In the game is still
+ tied, ranking of suits determines the winner ( Spades > Diamond > Heart > Clubs ).
+ - **High card:** First card with highest value determines the winner. If the game is
+ tied, then ranking of card suit determines the winner ( Spades > Diamond > Heart > Clubs
+    ).
 
-**Entry Fee:** Every player has to put in a *minimum* bet in order to join a game. This
+Below are definitions for some of the varying rules for our implementation:
+
+**Entry Fee:** Every player has to put in a minimum bet in order to join a game. This
 ensures that a player playing *tight* game also loses money every round.
 
 **Blinds:** Blind players put up at least *half* the amount of the current level of bet
@@ -30,7 +43,13 @@ hands. A blind player __cannot__ request for side-show.
 **Show:** When only two players are playing, any player can request for show of cards, by
 putting double the minimum bet amount.
 
+**Timeout:** A player not playing for 30 seconds will be timed-out to a the minimum bet.
+After 3 such timeouts, the player will be removed from the table.
+
 ### Stretch Goals
+
+**Incorporate security tests:** Have Static Application Security Testing (SAST) and
+Dynamic Application Security Testing (DAST).
 
 **Number of players:** Objective is to allow up to 8 players on a table.
 
@@ -39,6 +58,6 @@ Patti, namely, *Best-of-four* and *Community*.
 
 ### Challenges for the game:
 
-1) Develping a structure for storing information about players and game on the server is challenging as there is no database to keep track of it.
+1. Developing a structure for storing information about players and game on the server is challenging as there is no database to keep track of it.
 
-2) We will have to figure which is more interesting: Antes or Blinds.
+2. We will have to figure which is more interesting: Antes or Blinds.

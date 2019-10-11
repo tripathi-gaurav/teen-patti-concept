@@ -1,40 +1,38 @@
 # Teen Patti
 
-## Elements of the game
+*Teen Patti* (Hindi for Three Card Poker) is a well game known and played in the Indian
+sub-continent region. Essentially, every player is given a hand of 3 cards
+We plan to build an web version of the game that's compatible with mobile devices as well.
 
-### Betting
-
-**Turns:** Turns are played in counter-clockwise direction with the winner of previous
-round being designated as the dealer.
+The rules of Teen Patti usually vary and are agreed upon before the match. Ranking of
+cards are pretty well established and common. Below are definitions for some of the
+varying rules for our implementation:
 
 **Entry Fee:** Every player has to put in a *minimum* bet in order to join a game. This
 ensures that a player playing *tight* game also loses money every round.
-~A player temporarily leaving the table has to put up the *Ante* to the pot for the next
-round.~
 
 **Blinds:** Blind players put up at least *half* the amount of the current level of bet
 by a seen player. We will not implement a *force blind* round after the ante.
 
-**Calling and raising:** A player can call and/or raise the bet by either calling at
-least an equal amount that was called before or raising it to a newer amount.
-A blind player has to put in a minimum of half the current bet amount.
-Betting will continue till each player has matched the current bet or a defined
-threshold of number of rounds of betting are matched or peak betting amount is hit.
+**Calling and raising:** A player who has seen the cards can *call* by the minimum amount
+or *raise* the bet. A blind player will have to *call* or *match* half of the minimum
+calling amount. When a blind player *raises* the bet, every *seen* player has to *call* a
+minimum of the double the blind bet.
 
-###
+**A Game:** A game will be made up of 5 rounds.
 
+**Limiting:** Tables will have a *spread-limit* for a total maximum bet on the table.
 
-##### Expected Problems ######
+**Side-show:** A player can request the previous player for a (side-)show by putting up
+double the minimum bet amount and if accepted, they participate in a private *show* of
+hands. A blind player __cannot__ request for side-show.
 
-**Limiting the raise:** We need to figure out a mechanism to limit
+**Show:** When only two players are playing, any player can request for show of cards, by
+putting double the minimum bet amount.
 
-**Resolving "all-in" situations:** The
+### Stretch Goals
 
-**Handling players exiting a round:**
+**Number of players:** Objective is to allow up to 8 players on a table.
 
-
-A "game" needs to be a series of hands rather than a single hand.
-You'll want some sort of structured required bet. Blinds are more interesting than antes.
-
-For this game specifically, it looks really useful to support more than two players.
-You should plan allow 2-8 players per table, at least as a stretch goal
+**Variations of Teen-Patti:** Have different tables running different variations of Teen-
+Patti, namely, *Best-of-four* and *Community*.

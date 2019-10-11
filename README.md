@@ -36,3 +36,9 @@ putting double the minimum bet amount.
 
 **Variations of Teen-Patti:** Have different tables running different variations of Teen-
 Patti, namely, *Best-of-four* and *Community*.
+
+### Challenges for the game:
+
+1) Develping a structure for storing information about players and game on the server is challenging as there is no database to keep track of it.
+
+2) We will have to figure which is more interesting: Antes or Blinds.

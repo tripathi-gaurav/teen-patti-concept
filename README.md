@@ -48,13 +48,16 @@ After 3 such timeouts, the player will be removed from the table.
 
 ### Stretch Goals
 
+**Number of players:** While the game can be played with two players, the intent is to
+allow up to 8 players per table.
+
 **Increase interactivity:** Increase the interaction between users apart from chats. Maybe
- the ability to gift *items* to other users on the table?
+ the ability to gift *items* to other users on the table? Selecting an avatar while
+ joining a table is another interesting functionality that we want to add.
 
-**Incorporate security tests:** Have Static Application Security Testing (SAST) and
-Dynamic Application Security Testing (DAST).
-
-**Number of players:** Objective is to allow up to 8 players on a table.
+**Incorporate security tests:** We intend to ensure security in our software and
+therefore, intend to have Static Application Security Testing (SAST) and Dynamic
+Application Security Testing (DAST).
 
 **Variations of Teen-Patti:** Have different tables running different variations of Teen-
 Patti, namely, *Best-of-four* and *Community*.
